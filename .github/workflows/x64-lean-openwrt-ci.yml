@@ -10,9 +10,9 @@ name: X64-Lean-OpenWrt-CI
 on:
 #  schedule:
 #    - cron: 0 22 * * *
-#  push:
-#    branches: 
-#      - master
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
@@ -68,9 +68,9 @@ jobs:
       run: |
           rm -rf ./artifact/
           mkdir -p ./artifact/
-          find openwrt/bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
+          #find openwrt/bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "*64*" | xargs -i mv -f {} ./artifact/
+          #find openwrt/bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
 
     - name: Upload artifact
       uses: actions/upload-artifact@master
