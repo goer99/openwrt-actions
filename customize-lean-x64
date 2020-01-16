@@ -2460,7 +2460,7 @@ CONFIG_PACKAGE_kmod-usb3=y
 #
 CONFIG_PACKAGE_kmod-kvm-amd=y
 CONFIG_PACKAGE_kmod-kvm-intel=y
-CONFIG_PACKAGE_kmod-kvm-x86=y
+# CONFIG_PACKAGE_kmod-kvm-x86=y
 
 #
 # Voice over IP
