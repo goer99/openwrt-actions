@@ -69,7 +69,8 @@ jobs:
           rm -rf ./artifact/
           mkdir -p ./artifact/
           #find openwrt/bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*64*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "openwrt-x86-64*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "config.seed" | xargs -i mv -f {} ./artifact/
           #find openwrt/bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
 
     - name: Upload artifact
